@@ -3,13 +3,13 @@
 	Since we use 'cache with Network Update' strategy, we don't need to manually add files to be stored in cache, browser will do this for us! 
 */
 
-const cacheName = 'project-name-v1.0'; /* Name your cache  */
-const filesToCache = ['/project-name/index.html'] /* that's all, all of the rest files will be automatically installed in cache */
+const cacheName = 'monster_kong-v1.0'; /* Name your cache  */
+const filesToCache = ['/index.html'] /* that's all, all of the rest files will be automatically installed in cache */
 
 // register service worker
 if ('serviceWorker' in navigator) { // || if (navigator.serviceWorker) {
   window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/project-name/sw.js', {scope: '/project-name/'})
+      navigator.serviceWorker.register('/sw.js', {scope: '/'})
         .then(registration => {
           console.log('ServiceWorker registration successful with scope: ', registration.scope);
       }).catch(err => {
